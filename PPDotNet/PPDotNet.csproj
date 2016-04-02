@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{635E30A6-4071-4DEC-9577-A0EBF4C0A34D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PPDotNet</RootNamespace>
+    <AssemblyName>PPDotNet</AssemblyName>
+    <ApplicationIcon>Tool.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MatrixReporter, Version=1.0.2099.24224, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Recursos\Componentes\MatrixReporter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Winforms.2010SP1Update.10.0.40219.329\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PopCalc.Library, Version=1.0.2663.17887, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Recursos\Componentes\PopCalc.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSources\dsContatos.cs">
+      <DependentUpon>dsContatos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsContatos.designer.cs">
+      <DependentUpon>dsContatos.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="DataSources\dsSaida.cs">
+      <DependentUpon>dsSaida.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsSaida.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSaida.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\GrupoLinhaProd.cs">
+      <DependentUpon>GrupoLinhaProd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\GrupoLinhaProd.Designer.cs">
+      <DependentUpon>GrupoLinhaProd.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="DataSources\dsCMBOrca.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCMBOrca.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmCfopCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmCfopCad.designer.cs">
+      <DependentUpon>frmCfopCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmCfopCons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmCfopCons.designer.cs">
+      <DependentUpon>frmCfopCons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmLocForn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmLocForn.designer.cs">
+      <DependentUpon>frmLocForn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmLocProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmLocProduto.designer.cs">
+      <DependentUpon>frmLocProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmPessoaCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmPessoaCad.designer.cs">
+      <DependentUpon>frmPessoaCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmPessoaCons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmPessoaCons.designer.cs">
+      <DependentUpon>frmPessoaCons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmProdutoCons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmProdutoCons.designer.cs">
+      <DependentUpon>frmProdutoCons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmProdutosCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cadastros\frmProdutosCad.designer.cs">
+      <DependentUpon>frmProdutosCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Modelos\frmModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Modelos\frmModelo.designer.cs">
+      <DependentUpon>frmModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Modelos\frmModeloCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Modelos\frmModeloCadastro.designer.cs">
+      <DependentUpon>frmModeloCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Modelos\frmModeloConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Modelos\frmModeloConsulta.designer.cs">
+      <DependentUpon>frmModeloConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Relatórios\frmPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Relatórios\frmPreview.designer.cs">
+      <DependentUpon>frmPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmOrcamento.designer.cs">
+      <DependentUpon>frmOrcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmOrcaCons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmOrcaCons.designer.cs">
+      <DependentUpon>frmOrcaCons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmLocPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmLocPessoa.designer.cs">
+      <DependentUpon>frmLocPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmLocProdSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmLocProdSaida.designer.cs">
+      <DependentUpon>frmLocProdSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmSaida.designer.cs">
+      <DependentUpon>frmSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmSaidaCons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Saída\frmSaidaCons.designer.cs">
+      <DependentUpon>frmSaidaCons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Sistema\Helpers.cs" />
+    <Compile Include="Formulários\Sistema\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Sistema\Principal.designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\Cadastros\frmCfopCad.resx">
+      <DependentUpon>frmCfopCad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Cadastros\frmCfopCons.resx">
+      <DependentUpon>frmCfopCons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Cadastros\frmLocForn.resx">
+      <DependentUpon>frmLocForn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Cadastros\frmLocProduto.resx">
+      <DependentUpon>frmLocProduto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Cadastros\frmPessoaCad.resx">
+      <DependentUpon>frmPessoaCad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Cadastros\frmPessoaCons.resx">
+      <DependentUpon>frmPessoaCons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Cadastros\frmProdutoCons.resx">
+      <DependentUpon>frmProdutoCons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Cadastros\frmProdutosCad.resx">
+      <DependentUpon>frmProdutosCad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Modelos\frmModelo.resx">
+      <DependentUpon>frmModelo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Modelos\frmModeloCadastro.resx">
+      <DependentUpon>frmModeloCadastro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Modelos\frmModeloConsulta.resx">
+      <DependentUpon>frmModeloConsulta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Relatórios\repOrcaPP.rdlc" />
+    <EmbeddedResource Include="Formulários\Relatórios\frmPreview.resx">
+      <DependentUpon>frmPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Saída\frmOrcamento.resx">
+      <DependentUpon>frmOrcamento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Saída\frmOrcaCons.resx">
+      <DependentUpon>frmOrcaCons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Saída\frmLocPessoa.resx">
+      <DependentUpon>frmLocPessoa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Saída\frmLocProdSaida.resx">
+      <DependentUpon>frmLocProdSaida.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Saída\frmSaida.resx">
+      <DependentUpon>frmSaida.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Saída\frmSaidaCons.resx">
+      <DependentUpon>frmSaidaCons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Relatórios\repOrca.rdlc" />
+    <EmbeddedResource Include="Formulários\Sistema\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSources\dsContatos.xsc">
+      <DependentUpon>dsContatos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSources\dsContatos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContatos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSources\dsContatos.xss">
+      <DependentUpon>dsContatos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSources\dsSaida.xsc">
+      <DependentUpon>dsSaida.xsd</DependentUpon>
+    </None>
+    <None Include="DataSources\dsSaida.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSaida.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSources\dsSaida.xss">
+      <DependentUpon>dsSaida.xsd</DependentUpon>
+    </None>
+    <None Include="DataSources\GrupoLinhaProd.xsc">
+      <DependentUpon>GrupoLinhaProd.xsd</DependentUpon>
+    </None>
+    <None Include="DataSources\GrupoLinhaProd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GrupoLinhaProd.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSources\GrupoLinhaProd.xss">
+      <DependentUpon>GrupoLinhaProd.xsd</DependentUpon>
+    </None>
+    <None Include="DataSources\dsCMBOrca.xsc">
+      <DependentUpon>dsCMBOrca.xsd</DependentUpon>
+    </None>
+    <None Include="DataSources\dsCMBOrca.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCMBOrca.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSources\dsCMBOrca.xss">
+      <DependentUpon>dsCMBOrca.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DllClasses\DllClasses.csproj">
+      <Project>{6BF37612-FF44-4EB6-93B6-BA15D77D0DD2}</Project>
+      <Name>DllClasses</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flag.ico" />
+    <Content Include="Tool.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

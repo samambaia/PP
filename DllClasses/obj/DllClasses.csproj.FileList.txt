@@ -1,0 +1,12 @@
+bin\Debug\DllClasses.dll.config
+bin\Debug\DllClasses.dll
+bin\Debug\DllClasses.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DllClasses.dll
+obj\Debug\DllClasses.pdb
+bin\Release\DllClasses.dll.config
+bin\Release\DllClasses.dll
+bin\Release\DllClasses.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\DllClasses.dll
+obj\Release\DllClasses.pdb

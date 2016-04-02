@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsContatos" targetNamespace="http://tempuri.org/dsContatos.xsd" xmlns:mstns="http://tempuri.org/dsContatos.xsd" xmlns="http://tempuri.org/dsContatos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=SERVIDOR\SQLX;Initial Catalog=C:\Adrimar\DATA\ADRIMAR_DB.MDF;Integrated Security=True" IsAppSettingsProperty="False" Modifier="Assembly" Name="servidor\sqlx.C:\Adrimar\Data\Adrimar.mdf.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient">
+          </Connection>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Conexao" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="Conexao (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PPDotNet.Properties.Settings.GlobalReference.Default.Conexao" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PESSOATableAdapter" GeneratorDataComponentClassName="PESSOATableAdapter" Name="PESSOA" UserDataComponentName="PESSOATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conexao (Settings)" DbObjectName="dbo.PESSOA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT     id_pessoa, COALESCE (fantasia, razao_social) AS fantasia
+FROM         PESSOA
+WHERE     (ativo = 1)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_pessoa" DataSetColumn="id_pessoa" />
+              <Mapping SourceColumn="fantasia" DataSetColumn="fantasia" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VENDEDORTableAdapter" GeneratorDataComponentClassName="VENDEDORTableAdapter" Name="VENDEDOR" UserDataComponentName="VENDEDORTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conexao (Settings)" DbObjectName="dbo.PESSOA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT        id_pessoa, COALESCE (fantasia, razao_social) AS fantasia
+FROM            PESSOA
+WHERE        (ativo = 1) AND (vendedor = 1)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_pessoa" DataSetColumn="id_pessoa" />
+              <Mapping SourceColumn="fantasia" DataSetColumn="fantasia" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsContatos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsContatos" msprop:Generator_DataSetName="dsContatos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PESSOA" msprop:Generator_UserTableName="PESSOA" msprop:Generator_RowDeletedName="PESSOARowDeleted" msprop:Generator_RowChangedName="PESSOARowChanged" msprop:Generator_RowClassName="PESSOARow" msprop:Generator_RowChangingName="PESSOARowChanging" msprop:Generator_RowEvArgName="PESSOARowChangeEvent" msprop:Generator_RowEvHandlerName="PESSOARowChangeEventHandler" msprop:Generator_TableClassName="PESSOADataTable" msprop:Generator_TableVarName="tablePESSOA" msprop:Generator_RowDeletingName="PESSOARowDeleting" msprop:Generator_TablePropName="PESSOA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_pessoa" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="id_pessoa" msprop:Generator_ColumnPropNameInRow="id_pessoa" msprop:Generator_ColumnVarNameInTable="columnid_pessoa" msprop:Generator_ColumnPropNameInTable="id_pessoaColumn" type="xs:int" />
+              <xs:element name="fantasia" msprop:Generator_UserColumnName="fantasia" msprop:Generator_ColumnPropNameInRow="fantasia" msprop:Generator_ColumnVarNameInTable="columnfantasia" msprop:Generator_ColumnPropNameInTable="fantasiaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VENDEDOR" msprop:Generator_UserTableName="VENDEDOR" msprop:Generator_RowDeletedName="VENDEDORRowDeleted" msprop:Generator_RowChangedName="VENDEDORRowChanged" msprop:Generator_RowClassName="VENDEDORRow" msprop:Generator_RowChangingName="VENDEDORRowChanging" msprop:Generator_RowEvArgName="VENDEDORRowChangeEvent" msprop:Generator_RowEvHandlerName="VENDEDORRowChangeEventHandler" msprop:Generator_TableClassName="VENDEDORDataTable" msprop:Generator_TableVarName="tableVENDEDOR" msprop:Generator_RowDeletingName="VENDEDORRowDeleting" msprop:Generator_TablePropName="VENDEDOR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_pessoa" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="id_pessoa" msprop:Generator_ColumnVarNameInTable="columnid_pessoa" msprop:Generator_ColumnPropNameInRow="id_pessoa" msprop:Generator_ColumnPropNameInTable="id_pessoaColumn" type="xs:int" />
+              <xs:element name="fantasia" msprop:Generator_UserColumnName="fantasia" msprop:Generator_ColumnVarNameInTable="columnfantasia" msprop:Generator_ColumnPropNameInRow="fantasia" msprop:Generator_ColumnPropNameInTable="fantasiaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PESSOA" />
+      <xs:field xpath="mstns:id_pessoa" />
+    </xs:unique>
+    <xs:unique name="VENDEDOR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VENDEDOR" />
+      <xs:field xpath="mstns:id_pessoa" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,13 @@
+E:\Projetos\PP\DllClasses\obj\Debug\ResolveAssemblyReference.cache
+C:\PP\DllClasses\bin\Release\DllClasses.dll.config
+C:\PP\DllClasses\bin\Release\DllClasses.dll
+C:\PP\DllClasses\bin\Release\DllClasses.pdb
+C:\PP\DllClasses\obj\Release\ResolveAssemblyReference.cache
+C:\PP\DllClasses\obj\Release\DllClasses.dll
+C:\PP\DllClasses\obj\Release\DllClasses.pdb
+C:\PP\DllClasses\bin\Debug\DllClasses.dll.config
+C:\PP\DllClasses\bin\Debug\DllClasses.dll
+C:\PP\DllClasses\bin\Debug\DllClasses.pdb
+C:\PP\DllClasses\obj\Debug\ResolveAssemblyReference.cache
+C:\PP\DllClasses\obj\Debug\DllClasses.dll
+C:\PP\DllClasses\obj\Debug\DllClasses.pdb

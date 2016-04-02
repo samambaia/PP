@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsProd" targetNamespace="http://tempuri.org/dsProd.xsd" xmlns:mstns="http://tempuri.org/dsProd.xsd" xmlns="http://tempuri.org/dsProd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Conexao" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="Conexao (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PPDotNet.Properties.Settings.GlobalReference.Default.Conexao" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FORNECEDORTableAdapter" GeneratorDataComponentClassName="FORNECEDORTableAdapter" Name="FORNECEDOR" UserDataComponentName="FORNECEDORTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conexao (Settings)" DbObjectName="[C:\Adrimar\Data\Adrimar_db.mdf].dbo.PESSOA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT        id_pessoa, fantasia
+FROM            PESSOA
+WHERE        (fornecedor = 1)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_pessoa" DataSetColumn="id_pessoa" />
+              <Mapping SourceColumn="fantasia" DataSetColumn="fantasia" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FABRICATableAdapter" GeneratorDataComponentClassName="FABRICATableAdapter" Name="FABRICA" UserDataComponentName="FABRICATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conexao (Settings)" DbObjectName="[C:\Adrimar\Data\Adrimar_db.mdf].dbo.PESSOA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT        id_pessoa, fantasia
+FROM            PESSOA
+WHERE        (fornecedor = 1)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_pessoa" DataSetColumn="id_pessoa" />
+              <Mapping SourceColumn="fantasia" DataSetColumn="fantasia" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PRODUTOSTableAdapter" GeneratorDataComponentClassName="PRODUTOSTableAdapter" Name="PRODUTOS" UserDataComponentName="PRODUTOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conexao (Settings)" DbObjectName="[C:\Adrimar\Data\Adrimar_db.mdf].dbo.PRODUTOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT        id_produto, descricao
+FROM            PRODUTOS
+WHERE        (pai_filho = 1)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_produto" DataSetColumn="id_produto" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FABRICA_C_ESTTableAdapter" GeneratorDataComponentClassName="FABR
